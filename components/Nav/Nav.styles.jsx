@@ -2,6 +2,7 @@ import styled from 'styled-components';
 //Styles for Nav
 export const NavShadow = styled.header`
     box-shadow: 0px 1px 10px 0px rgb(144,207,212);
+    background-color: #a3a3a3;
 `
 export const NavContainer = styled.div`
     display: flex;
