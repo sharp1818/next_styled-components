@@ -10,7 +10,7 @@ import {HiMenu} from 'react-icons/hi'
 import {RiHomeSmile2Fill} from 'react-icons/ri'
 import {RiHandHeartFill} from 'react-icons/ri'
 import {BiHappyBeaming} from 'react-icons/bi'
-import {GrContact} from 'react-icons/gr'
+import {MdContactMail} from 'react-icons/md'
 
 const NavMobile = () => {
 
@@ -30,7 +30,7 @@ const NavMobile = () => {
             </OptionMenu>
           </Link>
           <Link href="/promociones">
-            <OptionMenu onClick={()=>setShowMobileMenu(!showMobileMenu)}>
+            <OptionMenu onClick={()=>setShowMobileMenu(!showMobileMenu) }>
               <BiHappyBeaming/> Promociones
             </OptionMenu>
           </Link>
@@ -41,7 +41,7 @@ const NavMobile = () => {
           </Link>
           <Link href="/contacto">
             <OptionMenu onClick={()=>setShowMobileMenu(!showMobileMenu)}>
-              <GrContact/> Contacto
+              <MdContactMail/> Contacto
             </OptionMenu>
           </Link>
         </IconContext.Provider>

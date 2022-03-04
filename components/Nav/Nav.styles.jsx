@@ -72,10 +72,10 @@ export const MobileMenu = styled.div`
 `
 export const OptionMenu = styled.div`
     font-size: 20px;
-    color: ${COLORS.navBar_letter_color};
     display: flex;
     align-items: center;
     gap: 5px;
+    color: ${COLORS.navBar_letter_color};
 `
 
 //Styles for NavDesktop
@@ -88,6 +88,9 @@ export const ContainerNavMenu = styled.div`
 export const OptionNavMenu = styled.div`
     font-size: 20px;
     font-weight: bold;
-    color: ${COLORS.navBar_letter_color};
+    color: ${(props) => (props.href === props.pathName ? `${COLORS.primary_color}` : `${COLORS.navBar_letter_color}`)};
     cursor: pointer;
+    :hover{
+        color: ${COLORS.primary_color}
+    }
 `

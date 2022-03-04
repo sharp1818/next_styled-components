@@ -6,6 +6,9 @@ export const FooterLayout = styled.footer`
     flex-direction: column;
     background-color: ${COLORS.footer_background_color};
     padding-top: 8px;
+    position: relative;
+    bottom:0;
+    width:100%;
 `;
 export const ContactInfo = styled.div`
     display: flex;
@@ -14,7 +17,7 @@ export const ContactInfo = styled.div`
     text-align: center;
     font-size: 14px;
     color: #202020;
-    gap: 10px;
+    gap: 20px;
     @media screen and (max-width: 630px){
         flex-direction: column;
         align-items: center;
@@ -33,7 +36,7 @@ export const FollowIcons = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 10px;
+    gap: 12px;
     padding: 8px 0px;
 `;
 export const Copyright = styled.div`

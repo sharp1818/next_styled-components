@@ -1,7 +1,7 @@
 import React from 'react'
 import { FooterLayout ,ContactInfo, FollowIcons, Copyright } from './Footer.styles'
 import {GrFacebook,GrInstagram} from 'react-icons/gr'
-import {HiPhone, HiLocationMarker, HiMail} from 'react-icons/hi'
+import {HiLocationMarker, HiMail} from 'react-icons/hi'
 
 const Footer = () => {
   return (
@@ -14,13 +14,6 @@ const Footer = () => {
             rel="noreferrer"
           >
             <HiLocationMarker style={{fontSize: '18px'}}/> 27 de Agosto 245 - Reynoso
-          </a>
-          <a 
-            href="tel:999 999 999"
-            target="_blank" 
-            rel="noreferrer"
-          >
-            <HiPhone style={{fontSize: '18px'}}/> 999 999 999
           </a>
           <a 
             href="mailto: adrian.shura18@gmail.com"
