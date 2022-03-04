@@ -1,8 +1,9 @@
 import styled from 'styled-components';
+import COLORS from '../../styles/colors.jsx' 
 //Styles for Nav
 export const NavShadow = styled.header`
-    box-shadow: 0px 1px 10px 0px rgb(144,207,212);
-    background-color: #a3a3a3;
+    box-shadow: 0px 1px 8px 0px rgb(224, 199, 210);
+    background-color: ${COLORS.navBar_background_color};
 `
 export const NavContainer = styled.div`
     display: flex;
@@ -19,7 +20,13 @@ export const LogoMenuLayout = styled.div`
     align-items: center;
     @media screen and (max-width: 920px){
         flex-direction: row-reverse;
-        gap: 26px;
+        gap: 16px;
+    }
+`
+export const LogoSvg = styled.div`
+    @media screen and (max-width: 920px){
+        width: 72px;
+        height: 60px;
     }
 `
 export const ContactContainer = styled.div`
@@ -35,12 +42,12 @@ export const DeliveryContainer =styled.div`
 `
 export const Info = styled.div`
     :nth-child(1){
-        color: rgb(144,207,212);
+        color: ${COLORS.navBar_letter_color};
     }
     :nth-child(2){
         font-size: 16px;
         font-weight: bold;
-        color: rgb(27,64,73);
+        color: ${COLORS.navBar_letter_color};
     }
     @media screen and (max-width: 920px){
         display: none;
@@ -48,7 +55,7 @@ export const Info = styled.div`
 `
 //Styles for NavMobile
 export const ContainerMobileMenu = styled.div`
-    background-color: rgb(144 207 212);
+    background-color: ${COLORS.navBar_background_color};
     position: absolute;
     top: 0px;
     left: ${({ open }) => (open ? "0" : "-100%")}; //Import
@@ -65,20 +72,12 @@ export const MobileMenu = styled.div`
 `
 export const OptionMenu = styled.div`
     font-size: 20px;
-    color: #fff;
+    color: ${COLORS.navBar_letter_color};
     display: flex;
     align-items: center;
     gap: 5px;
 `
-export const ButtonCloseMenu = styled.div`
-    font-size: 20px;
-    color: #292929;
-    display: flex;
-    align-items: center;
-    flex-direction: column-reverse;
-    position: absolute;
-    bottom: 30px;
-`
+
 //Styles for NavDesktop
 export const ContainerNavMenu = styled.div`
     display: flex;
@@ -89,6 +88,6 @@ export const ContainerNavMenu = styled.div`
 export const OptionNavMenu = styled.div`
     font-size: 20px;
     font-weight: bold;
-    color: #134653;
+    color: ${COLORS.navBar_letter_color};
     cursor: pointer;
 `

@@ -3,9 +3,9 @@ import React from 'react'
 const nosotros = () => {
   return (
     <>
-        <div>
-          Nuestra Carta
-        </div>
+      <div>
+        Servicios
+      </div>
     </>
   )
 }

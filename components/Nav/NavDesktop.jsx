@@ -11,14 +11,19 @@ const NavDesktop = () => {
             Inicio
           </OptionNavMenu>
         </Link>
-        <Link href="/menu-carta" passHref>
+        <Link href="/promociones" passHref>
           <OptionNavMenu>
-            Nuestra Carta
+            Promociones
           </OptionNavMenu>
         </Link>
-        <Link href="/delivery" passHref> 
+        <Link href="/servicios" passHref>
           <OptionNavMenu>
-            Delivery
+            Servicios
+          </OptionNavMenu>
+        </Link>
+        <Link href="/contacto" passHref> 
+          <OptionNavMenu>
+            Contacto
           </OptionNavMenu>
         </Link>
     </ContainerNavMenu>

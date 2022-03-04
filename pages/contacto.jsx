@@ -4,7 +4,7 @@ const servicios = () => {
   return (
     <>
       <div>
-        Delivery
+        Contacto
       </div>
     </>
   )

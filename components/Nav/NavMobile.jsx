@@ -4,16 +4,13 @@ import {
   ContainerMobileMenu, 
   MobileMenu, 
   OptionMenu, 
-  ButtonCloseMenu
 } from './Nav.styles'
 import { IconContext } from 'react-icons'
-import {
-  FaHome, 
-  FaWindowClose
-} from 'react-icons/fa'
-import {HiMenuAlt2} from 'react-icons/hi'
-import {BiFoodMenu} from 'react-icons/bi'
-import {MdOutlineDeliveryDining} from 'react-icons/md'
+import {HiMenu} from 'react-icons/hi'
+import {RiHomeSmile2Fill} from 'react-icons/ri'
+import {RiHandHeartFill} from 'react-icons/ri'
+import {BiHappyBeaming} from 'react-icons/bi'
+import {GrContact} from 'react-icons/gr'
 
 const NavMobile = () => {
 
@@ -22,29 +19,31 @@ const NavMobile = () => {
   return (
     <>
     <div onClick={()=>setShowMobileMenu(!showMobileMenu)}>
-      <HiMenuAlt2 style={{color: 'rgb(144 207 212)', fontSize: '40px'}}/>
+      <HiMenu style={{color: 'rgb(85, 80, 82)', fontSize: '40px'}}/>
     </div>
     <ContainerMobileMenu open={showMobileMenu}>
       <MobileMenu>
-        <IconContext.Provider value={{style: {fontSize: '20px'}}}>
+        <IconContext.Provider value={{style: {fontSize: '24px'}}}>
           <Link href="/">
             <OptionMenu onClick={()=>setShowMobileMenu(!showMobileMenu)}>
-              <FaHome /> Inicio
+              <RiHomeSmile2Fill /> Inicio
             </OptionMenu>
           </Link>
-          <Link href="/menu-carta">
+          <Link href="/promociones">
             <OptionMenu onClick={()=>setShowMobileMenu(!showMobileMenu)}>
-              <BiFoodMenu/> Nuestra Carta
+              <BiHappyBeaming/> Promociones
             </OptionMenu>
           </Link>
-          <Link href="/delivery">
+          <Link href="/servicios">
             <OptionMenu onClick={()=>setShowMobileMenu(!showMobileMenu)}>
-              <MdOutlineDeliveryDining/> Delivery
+              <RiHandHeartFill/> Servicios
             </OptionMenu>
           </Link>
-          <ButtonCloseMenu onClick={()=>setShowMobileMenu(!showMobileMenu)}>
-            <FaWindowClose/> Cerrar
-          </ButtonCloseMenu>
+          <Link href="/contacto">
+            <OptionMenu onClick={()=>setShowMobileMenu(!showMobileMenu)}>
+              <GrContact/> Contacto
+            </OptionMenu>
+          </Link>
         </IconContext.Provider>
       </MobileMenu>
     </ContainerMobileMenu>

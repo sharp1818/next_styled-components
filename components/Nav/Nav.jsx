@@ -1,8 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import {
   NavShadow,
   NavContainer, 
   LogoMenuLayout,
+  LogoSvg,
   ContactContainer,
   DeliveryContainer,
   Info,
@@ -17,38 +18,50 @@ import { IconContext } from 'react-icons'
 import {RiPhoneLine} from 'react-icons/ri'
 import {FaWhatsappSquare} from 'react-icons/fa'
 const Nav = () => {
-  const {width, height} = useScreenSize();
+  const {width} = useScreenSize();
 
   return (
     <>
     <NavShadow>
       <NavContainer>
         <LogoMenuLayout>
-          <div>
+          <LogoSvg>
             <Link href="/">
               <a>
                 <Image
                 src={Logo}
                 alt='Logo'
-                width={62}  //187
-                height={50}  //150
+                width={91}  //182
+                height={75}   //150
                 />
               </a>
             </Link>
-          </div>
+          </LogoSvg>
           { width >= 920 
             ?<NavDesktop/>
             :<NavMobile/>
           }
         </LogoMenuLayout>
-        <IconContext.Provider value={{color: 'rgb(27 64 73)'}}>
+        <IconContext.Provider value={{color: 'rgb(85, 80, 82)'}}>
           <ContactContainer>
-            <RiPhoneLine style={{fontSize: '40px'}}/>
+            <a 
+            href="tel:999 999 999"
+            target="_blank" 
+            rel="noreferrer"
+            >
+              <RiPhoneLine style={{fontSize: '40px'}}/>
+            </a>
             <DeliveryContainer>
-              <Info>Delivery</Info>
+              <Info>Atención al cliente</Info>
               <Info>(01)777-7777</Info>
             </DeliveryContainer>
-            <FaWhatsappSquare style={{fontSize: '40px'}}/>
+            <a 
+              href="https://api.whatsapp.com/send?phone=51929377684&text=Deseo%20reservar%20una%20cita"
+              target="_blank" 
+              rel="noreferrer"
+            >
+              <FaWhatsappSquare style={{fontSize: '40px'}}/>
+            </a>
           </ContactContainer>
         </IconContext.Provider> 
       </NavContainer>
