@@ -19,10 +19,10 @@ import {RiPhoneLine} from 'react-icons/ri'
 import {FaWhatsappSquare} from 'react-icons/fa'
 const Nav = () => {
   const {width} = useScreenSize();
-  const [navbar, setNavbar] = useState('false');
+  const [navbar, setNavbar] = useState(false);
 
   const changeBackground = () => {
-    if(window.scrollY >= 80) {
+    if(window.scrollY >= 100) {
       setNavbar(true);
     } else {
       setNavbar(false);
