@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {
   NavShadow,
   NavContainer, 
@@ -19,10 +19,21 @@ import {RiPhoneLine} from 'react-icons/ri'
 import {FaWhatsappSquare} from 'react-icons/fa'
 const Nav = () => {
   const {width} = useScreenSize();
+  const [navbar, setNavbar] = useState('false');
+
+  const changeBackground = () => {
+    if(window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener('scroll', changeBackground);
 
   return (
     <>
-    <NavShadow>
+    <NavShadow background={navbar}>
       <NavContainer>
         <LogoMenuLayout>
           <LogoSvg>

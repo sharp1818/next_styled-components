@@ -2,8 +2,8 @@ import styled from 'styled-components';
 import COLORS from '../../styles/colors.jsx' 
 //Styles for Nav
 export const NavShadow = styled.header`
-    box-shadow: 0px 1px 8px 0px rgb(224, 199, 210);
-    background-color: ${COLORS.navBar_background_color};
+    /* box-shadow: 0px 1px 8px 0px rgb(224, 199, 210); */
+    background-color: ${(props) => (props.background ? `${COLORS.navBar_background_color}` : `transparent`)};
 `
 export const NavContainer = styled.div`
     display: flex;
@@ -27,6 +27,9 @@ export const LogoSvg = styled.div`
     @media screen and (max-width: 920px){
         width: 72px;
         height: 60px;
+    }
+    @media screen and (max-width: 420px){
+        display: none;
     }
 `
 export const ContactContainer = styled.div`
@@ -71,7 +74,9 @@ export const MobileMenu = styled.div`
     gap: 20px;
 `
 export const OptionMenu = styled.div`
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
     display: flex;
     align-items: center;
     gap: 5px;
@@ -86,8 +91,9 @@ export const ContainerNavMenu = styled.div`
     padding-left: 80px;
 `
 export const OptionNavMenu = styled.div`
-    font-size: 20px;
-    font-weight: bold;
+    font-size: 18px;
+    font-weight: 500;
+    text-transform: uppercase;
     color: ${(props) => (props.href === props.pathName ? `${COLORS.primary_color}` : `${COLORS.navBar_letter_color}`)};
     cursor: pointer;
     :hover{
