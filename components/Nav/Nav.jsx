@@ -9,7 +9,7 @@ import {
   Info,
 } from './Nav.styles'
 import useScreenSize from '../../hooks/useScreenSize'
-import Image from 'next/Image'
+import Image from 'next/image'
 import Logo from '../../public/images/logo.svg'
 import Link from 'next/dist/client/link'
 import NavMobile from './NavMobile'
