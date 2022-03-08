@@ -1,6 +1,6 @@
 import React from 'react'
 
-const servicios = () => {
+const contacto = () => {
   return (
     <>
       <div>
@@ -10,4 +10,4 @@ const servicios = () => {
   )
 }
 
-export default servicios
+export default contacto
