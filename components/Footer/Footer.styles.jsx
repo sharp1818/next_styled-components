@@ -56,7 +56,7 @@ export const ButtonPromo = styled.div`
     cursor: pointer;
 `
 export const ContactTitle = styled.div`
-    font-size: 34px;
+    font-size: 40px;
     color: ${COLORS.white_color};
     padding-bottom: 4px;
     letter-spacing: 2px;

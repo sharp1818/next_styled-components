@@ -8,16 +8,6 @@ export default async function handler (req, res) {
 }
 
 const GetServices = async (req, res) => {
-  const [result] = await pool.query('SELECT * FROM services');
-  return res.status(200).json(result)
-}
-
-const GetServices_price_DESC = async (req, res) => {
-  const [result] = await pool.query('SELECT * FROM services ORDER BY price DESC');
-  return res.status(200).json(result)
-}
-
-const GetServices_price_ASC = async (req, res) => {
-  const [result] = await pool.query('SELECT * FROM services ORDER BY price ASC');
+  const [result] = await pool.query('SELECT * FROM products.types_group');
   return res.status(200).json(result)
 }

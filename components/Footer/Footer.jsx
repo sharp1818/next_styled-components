@@ -43,21 +43,21 @@ const Footer = () => {
               target="_blank" 
               rel="noreferrer"
             >
-              <span><FaPhoneAlt style={{fontSize: '18px'}}/> Celular</span> +51 999 999 999
+              <span><FaPhoneAlt style={{fontSize: '14px'}}/> Celular</span> +51 999 999 999
             </a>
             <a 
               href="mailto: adrian.shura18@gmail.com"
               target="_blank" 
               rel="noreferrer"
             >
-              <span><HiMail style={{fontSize: '22px'}}/> Email</span> info@selyn_spa.com.pe
+              <span><HiMail style={{fontSize: '18px'}}/> Email</span> info@selyn_spa.com.pe
             </a>
             <a 
               href="https://www.google.com/maps/place/Jr.+27+de+Agosto+245,+Carmen+de+La+Legua+-+Reynoso+07006/@-12.0391284,-77.0853122,17z/data=!4m5!3m4!1s0x9105ceb38a4ec223:0x955fc6f8e930a3b!8m2!3d-12.0393488!4d-77.0853873"
               target="_blank" 
               rel="noreferrer"
             >
-              <span><HiLocationMarker style={{fontSize: '20px'}}/> Dirección</span> 27 de Agosto 245 - Reynoso
+              <span><HiLocationMarker style={{fontSize: '18px'}}/> Dirección</span> 27 de Agosto 245 - Reynoso
             </a>
           </ContactInfo>
         </ContactLayout>

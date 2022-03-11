@@ -1,8 +1,13 @@
 import React from 'react'
+import NavComponent from '../components/Nav/NavComponent'
 
 const index = () => {
   return (
     <>
+      <div>
+        <NavComponent page_title={'Home'}/>
+        Contacto
+      </div>
       <div>
         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim sit repudiandae quam blanditiis minus totam dolor rerum ipsa voluptatem tempora quia quaerat et at sed, aliquid amet commodi debitis molestias.
         Assumenda perferendis tenetur optio animi et eaque quasi fugit at iusto esse obcaecati quidem libero quaerat pariatur voluptatem minus natus voluptas cumque, consequuntur quos accusantium in saepe nobis! Minima, fugiat.

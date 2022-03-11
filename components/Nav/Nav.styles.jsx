@@ -56,6 +56,23 @@ export const Info = styled.div`
         display: none;
     }
 `
+//Style for NavComponent
+export const NavComponentLayout = styled.div`
+    text-align: center;
+    font-size: 50px;
+    font-weight: 400;
+    color: ${COLORS.black_color};
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url("../../images/navbar/1.png");
+    div{
+        background-color: #e65c5c21;
+        padding: 130px 0px 40px 0px;
+        @media screen and (max-width: 920px){
+            padding: 100px 0px 40px 0px;
+        }
+    }
+`
 //Styles for NavMobile
 export const ContainerMobileMenu = styled.div`
     background-color: ${COLORS.navBar_background_color};

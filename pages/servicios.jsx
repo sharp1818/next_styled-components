@@ -1,11 +1,14 @@
 import axios from "axios"
+import NavComponent from "../components/Nav/NavComponent"
+import ServicesBox from "../components/Servicios/ServicesBox"
 
 const servicios = ({services}) => {
 
   return (
     <>
       <div>
-      <select>
+        <NavComponent page_title={'Servicios'}/>
+      {/* <select>
         <option value="0">Ordenar:</option> 
         <option value="1">Precio Mayor a Menor</option> 
         <option value="2">Precio Menor a Mayor</option>
@@ -26,15 +29,20 @@ const servicios = ({services}) => {
         <option value="12">Alisado</option> 
         <option value="13">Color</option>
         <option value="14">Eventos</option>
-      </select>
-        Servicios
-        {/* {services.map(service => (
-          <div key={service.id}>
-            <h1>{service.name}</h1>
-            <p>{service.price}</p>
-            <p>{service.photo}</p>
-          </div>
-        ))} */}
+      </select> */}
+        {services.map(service => (
+          <ServicesBox 
+            key={service.id_group} 
+            photo1={`${service.photo1}`} 
+            photo2={`${service.photo2}`} 
+            id={`${service.id_group}`} 
+            name={`${service.name_group}`} 
+            description={`${service.description}`} 
+            info1={`${service.info1}`} 
+            info2={`${service.info2}`} 
+            info3={`${service.info3}`} 
+            info4={`${service.info4}`}
+          />))}
       </div>
     </>
   )
@@ -42,9 +50,6 @@ const servicios = ({services}) => {
 
 export const getServerSideProps = async (context) => {
   const {data} = await axios.get('http://localhost:3000/api/servicios')
-  console.log(await axios.get('http://localhost:3000/api/servicios/70'))
-  console.log(await axios.get('http://localhost:3000/api/categorias/Pedicure'))
-  console.log(await axios.get('http://localhost:3000/api/servicios/categoria/Cejas'))
   return {
     props: {
       services: data

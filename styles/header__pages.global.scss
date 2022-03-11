@@ -4,15 +4,13 @@ header {
     top: 0;
     left: 0;
     z-index: 100;
-    +div{
-      padding: 137px 0px 30px 0px;
-      max-width: 1220px;
-      margin: auto;
-      @media (max-width: 920px) {
-        padding: 118px 0px 30px 0px;
-      }
-      @media (max-width: 420px) {
-        padding: 102px 0px 30px 0px;
-      }
-    }
+    // +div{
+    //   padding: 137px 0px 30px 0px;
+    //   @media (max-width: 920px) {
+    //     padding: 118px 0px 30px 0px;
+    //   }
+    //   @media (max-width: 420px) {
+    //     padding: 102px 0px 30px 0px;
+    //   }
+    // }
   }
