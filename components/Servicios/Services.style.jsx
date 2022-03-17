@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import COLORS from '../../styles/colors.jsx' 
-//Layout
+//Layout --- ServicesBox
 export const ServiceBoxLayout = styled.div`
     display: grid;
     grid-template-columns: 1fr;
@@ -189,7 +189,7 @@ export const SecundaryImage = styled.div`
         bottom: 120px;
     }
 `
-//Content 
+//Content --- ServicesBox
 export const WrapRight = styled.section`
     padding: 0px 10px;
     @media screen and (min-width: 400px){
@@ -209,7 +209,8 @@ export const WrapRight = styled.section`
     }
 `
 export const Title = styled.div`
-    color: ${COLORS.primary_color};
+    color: ${COLORS.pink_color3};
+    font-weight: 500;
     display: flex;
     flex-direction: row;
     font-size: 22px;
@@ -226,9 +227,9 @@ export const Title = styled.div`
 `
 export const Name = styled.div`
     font-size: 24px;
-    color: #111111;
-    font-weight: 400;
-    padding: 4px 0px;
+    color: ${COLORS.pink_color2};
+    font-weight: 300;
+    padding: 0px 0px;
     @media screen and (min-width: 620px){
        font-size: 26px;
     }
@@ -241,14 +242,15 @@ export const Name = styled.div`
 `
 export const Description = styled.div`
     text-align: match-parent;
-    padding: 14px 0px;
+    padding: 8px 0px;
     font-size: 16px;
-    font-weight: 500;
-    color: ${COLORS.black_color2};
+    font-weight: 300;
+    color: ${COLORS.black_color};
     @media screen and (min-width: 620px){
        font-size: 18px;
     }
     @media screen and (min-width: 920px){
+        padding: 14px 0px;
         font-size: 20px;
     }
     @media screen and (min-width: 1500px){
@@ -265,13 +267,13 @@ export const Option = styled.li`
     flex-direction: row;
     padding: 2px 0px;
     font-size: 16px;
-    font-weight: 500;
-    color: ${COLORS.black_color2};
+    font-weight: 300;
+    color: ${COLORS.black_colo2};
     
     span:nth-child(1){
         display: flex;
         align-items: center;
-        color: ${COLORS.primary_color};
+        color: ${COLORS.pink_color2};
     }
     @media screen and (min-width: 620px){
        font-size: 18px;
@@ -282,4 +284,107 @@ export const Option = styled.li`
     @media screen and (min-width: 1500px){
         font-size: 22px;
     }
+`
+export const ButtonOpenPrices = styled.div`
+    font-size: 16px;
+    font-weight: 600;
+    border: 1px solid ${COLORS.pink_color3};
+    background-color: ${COLORS.white_color2};
+    color: ${COLORS.pink_color2};
+    padding: 6px 14px;
+    border-radius: 6px;
+    letter-spacing: 4px;
+    margin-top: 14px;
+`
+//Modal
+export const ModalContainer = styled.div`
+    z-index: 101;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    overflow-y: auto;
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+`
+export const ProductsLayout = styled.section`
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-gap:20px;
+    @media screen and (min-width: 678px){
+        grid-template-columns: repeat(2,1fr);
+    }
+    @media screen and (min-width: 1000px){
+        grid-template-columns: repeat(3,1fr);
+    }
+    @media screen and (min-width: 1350px){
+        grid-template-columns: repeat(4,1fr);
+    }
+`
+export const CloseButton = styled.div`
+  margin-top: 24px;
+  background-color: ${COLORS.pink_color};
+  color: ${COLORS.black_color};
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.75rem;
+  padding: .45rem 1.65rem;
+  position: relative;
+  text-align: center;
+  max-width: 200px;
+  cursor: pointer;
+  transform: rotate(0deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+    :focus {
+    outline: 0;
+    }
+    :after {
+    content: '';
+    position: absolute;
+    border: 1px solid ${COLORS.white_color};
+    bottom: 4px;
+    left: 4px;
+    width: calc(100% - 1px);
+    height: calc(100% - 1px);
+    }
+    :hover:after {
+    bottom: 2px;
+    left: 2px;
+    }
+`
+//BoxCard
+export const BoxCard = styled.div`
+    background-color: #fff;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 220px;
+    max-width: 300px;
+    padding-bottom: 10px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+`
+export const TitleCard = styled.div`
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-size:20px;
+    min-height: 80px;
+    padding: 4px 20px;
+`
+export const ImageFrame = styled.div`
+    text-align: center;
+`
+export const Price = styled.div`
+    border: 1px solid #202020;
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 4px;
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 20%), 0 1px 5px 0 rgb(0 0 0 / 12%);
 `

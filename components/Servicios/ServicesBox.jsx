@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Image from 'next/image'
 import {
   ServiceBoxLayout, 
@@ -12,13 +12,19 @@ import {
   Name,
   Description,
   List,
-  Option
+  Option,
+  ButtonOpenPrices
 } from './Services.style'
 import {BsCheck} from 'react-icons/bs'
 import {MdWaves} from 'react-icons/md'
+import ServicesProductsModal from './ServicesProductsModal'
 
 const ServicesBox = (props) => {
-  const {id, name, description, info1, info2, info3, info4, photo1, photo2} = props
+  const [showModal, SetShowModal] = useState(false)
+  const buttonHandler = () => {
+    SetShowModal(true)
+  }
+  const {id, name, description, info1, info2, info3, info4, photo1, photo2, products} = props
   return (
     <>
     <ServiceBoxLayout>
@@ -66,8 +72,12 @@ const ServicesBox = (props) => {
           <Option><span><BsCheck/></span><span>{info3}</span></Option>
           <Option><span><BsCheck/></span><span>{info4}</span></Option>
         </List>
+        <ButtonOpenPrices onClick={buttonHandler}>Lista de Precios</ButtonOpenPrices>
       </WrapRight>
     </ServiceBoxLayout>
+    {
+      showModal ? <ServicesProductsModal changeState={showModal=>SetShowModal(showModal)} category={products}/> : ''
+    }
     </>
   )
 }
