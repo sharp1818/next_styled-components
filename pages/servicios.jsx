@@ -1,6 +1,8 @@
 import axios from "axios"
 import NavComponent from "../components/Nav/NavComponent"
+import ServiceBook from "../components/Servicios/ServiceBook"
 import ServicesBox from "../components/Servicios/ServicesBox"
+import { FormBox } from"../styles/servicios/style"
 
 const servicios = ({services, category1, category2, category3, category4, category5, category6}) => {
 
@@ -31,6 +33,9 @@ const servicios = ({services, category1, category2, category3, category4, catego
             } 
           />))}
       </div>
+      <FormBox>
+          <ServiceBook/>
+      </FormBox>
     </>
   )
 }

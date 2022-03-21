@@ -33,14 +33,14 @@ export const ContactInfo = styled.div`
       display: flex;
       align-items: center;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      letter-spacing: 2px;
       font-size: 20px;
       color: ${COLORS.pink_color};
       gap: 4px;
-        :hover{color:${COLORS.footer_hover_color}}
+        /* :hover{color:${COLORS.footer_hover_color}}
         svg{
             :hover{color:${COLORS.footer_hover_color}}
-        }
+        } */
       }
     }:nth-child(1){
         background-size: cover;
@@ -59,7 +59,7 @@ export const ContactTitle = styled.div`
     font-size: 40px;
     color: ${COLORS.white_color};
     padding-bottom: 4px;
-    letter-spacing: 2px;
+    letter-spacing: 4px;
     text-transform: uppercase;
 `;
 export const FollowIcons = styled.div`
