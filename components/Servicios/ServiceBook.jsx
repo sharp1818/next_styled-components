@@ -31,7 +31,6 @@ const ServiceBook = () => {
     register,
     handleSubmit,
     reset,
-    control,
     formState: { errors },
   } = useForm();
 
@@ -170,7 +169,7 @@ const ServiceBook = () => {
           {errors.hour && (
             <div>
               {errors.hour?.type === "required" && (
-                <AlertError>Por favor, elija una hoa</AlertError>
+                <AlertError>Por favor, elija una hora</AlertError>
               )}
             </div>
           )}

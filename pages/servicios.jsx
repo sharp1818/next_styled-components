@@ -8,8 +8,9 @@ const servicios = ({services, category1, category2, category3, category4, catego
 
   return (
     <>
-      <NavComponent page_title={'Servicios'}/>
-      <div className="background-NavComponent">
+      <NavComponent page_title={'Servicios'} />
+      <a href="#form-box">AGENDA</a>
+      <div className="background-NavComponent" id="services-box">
         {services.map(service => (
           <ServicesBox 
             key={service.id_group} 
@@ -33,7 +34,7 @@ const servicios = ({services, category1, category2, category3, category4, catego
             } 
           />))}
       </div>
-      <FormBox>
+      <FormBox id="form-box">
           <ServiceBook/>
       </FormBox>
     </>

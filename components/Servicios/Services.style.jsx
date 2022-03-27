@@ -22,11 +22,12 @@ export const ServiceBoxLayout = styled.div`
     margin: auto;
   }
   section:first-child {
-    max-width: 200px;
+    max-width: 180px;
     position: relative;
-    left: 16%;
+    left: 20%;
     @media screen and (min-width: 320px) {
-      max-width: 220px;
+      max-width: 190px;
+      left: 24%
     }
     @media screen and (min-width: 400px) {
       max-width: 280px;
@@ -190,9 +191,9 @@ export const SecundaryImage = styled.div`
 `;
 //Content --- ServicesBox
 export const WrapRight = styled.section`
-  padding: 0px 10px;
+  padding: 0px 20px;
   @media screen and (min-width: 400px) {
-    padding: 0px 20px;
+    padding: 0px 30px;
   }
   @media screen and (min-width: 620px) {
     padding: 0px 40px;
@@ -295,6 +296,9 @@ export const ButtonOpenPrices = styled.div`
   letter-spacing: 4px;
   margin-top: 14px;
   cursor: pointer;
+  @media screen and (min-width: 1500px) {
+    font-size: 18px;
+  }
 `;
 //Modal
 export const ModalContainer = styled.div`
@@ -315,6 +319,7 @@ export const ProductsLayout = styled.section`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-gap: 20px;
+  
   @media screen and (min-width: 678px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -381,6 +386,7 @@ export const TitleCard = styled.div`
 `;
 export const ImageFrame = styled.div`
   text-align: center;
+  
 `;
 export const Price = styled.div`
   border: 1px solid #202020;
@@ -395,13 +401,12 @@ export const FormBox = styled.div`
   background-color: ${COLORS.black_transparent_color};
   margin: 0 auto;
   border-radius: 4px;
-  padding: 10px 0px 20px 0px;
+  padding: 20px 0px 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: 260px;
-  height: 700px;
   @media screen and (min-width: 480px) {
     width: 360px;
   }
@@ -440,6 +445,9 @@ export const LabelBox = styled.label`
   padding-left: 8px;
   letter-spacing: 2px;
   color: ${COLORS.pink_color4};
+  font-size: 16px;
+  text-transform: uppercase;
+  padding: 2px 8px;
   @media screen and (min-width: 480px) {
     font-size: 18px;
   }
