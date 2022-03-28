@@ -66,7 +66,8 @@ export const FollowIcons = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 12px;
+    align-items: center;
+    gap: 6px;
     padding: 0px 0px 4px 0px;
 `;
 export const Copyright = styled.div`
