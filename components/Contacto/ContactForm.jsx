@@ -7,20 +7,22 @@ import {
   FormBox,
   FormLayout,
   InputBox,
-  SelectBox,
   LabelBox,
   SendButton,
   AlertError,
-} from "./Services.style";
+  TextBox,
+} from "../Servicios/Services.style";
 
-const ServiceBook = () => {
+import {
+  TextBoxContainer,
+} from './Contact.styles'
+
+const ContactForm = () => {
   const [info, setInfo] = useState({
     yourname: "",
     lastname: "",
     phone: "",
-    service: "",
-    day: "",
-    hour: "",
+    message: "",
   });
 
   const handleChange = ({ target: { name, value } }) => {
@@ -35,14 +37,14 @@ const ServiceBook = () => {
   } = useForm();
 
   const onSubmit = async () => {
-    const res = await axios.post("api/servicios", info).then(reset());
+    const res = await axios.post("api/contacto", info).then(reset());
     console.log(res);
   };
 
   return (
     <>
       <FormBox>
-        <FormTitle>Agenda</FormTitle>
+        <FormTitle>Contacto</FormTitle>
         <FormLayout onSubmit={handleSubmit(onSubmit)}>
           <LabelBox htmlFor="yourname">Nombre:</LabelBox>
           <InputBox
@@ -99,7 +101,7 @@ const ServiceBook = () => {
             {...register("phone", {
               required: true,
               maxLength: 15,
-              pattern: /^[0-9+()]+$/i,
+              pattern: /^[0-9+() ]+$/i,
             })}
             type="text"
             name="phone"
@@ -119,65 +121,38 @@ const ServiceBook = () => {
               )}
             </div>
           )}
-          <LabelBox htmlFor="service">Servicio</LabelBox>
-          <SelectBox
-            {...register("service", { required: true })}
-            name="service"
-            defaultValue={""}
-            onChange={handleChange}
-          >
-            <option value="" hidden disabled>
-              Selecciona un Servicio
-            </option>
-            <option value="Manicure & Pedicure">Manicure & Pedicure</option>
-            <option value="Corte & Coloración de Cabello">Corte & Coloración de Cabello</option>
-            <option value="Pestañas & Cejas">Pestañas & Cejas</option>
-            <option value="Peinados, Tratamientos & Alisados">Peinados, Tratamientos & Alisados</option>
-            <option value="Selyn Esthetic">Selyn Esthetic</option>
-            <option value="Eventos">Eventos</option>
-          </SelectBox>
-          {errors.service && (
+          <LabelBox htmlFor="message">Mensaje:</LabelBox>
+          <TextBoxContainer>
+            <TextBox
+              {...register("message", {
+                required: true,
+                maxLength: 300,
+                pattern: /^[A-Za-z ÁÉÍÓÚáéíóúñÑ]+$/i,
+              })}
+              type="text"
+              name="message"
+              placeholder="Ingresa tu Mensaje"
+              onChange={handleChange}
+            />
+          </TextBoxContainer>
+          {errors.message && (
             <div>
-              {errors.service?.type === "required" && (
-                <AlertError>Por favor, seleccione un servicio</AlertError>
+              {errors.message?.type === "required" && (
+                <AlertError>Por favor, ingresa tu mensaje</AlertError>
+              )}
+              {errors.message?.type === "maxLength" && (
+                <AlertError>Se admite 300 letras como máximo</AlertError>
+              )}
+              {errors.message?.type === "pattern" && (
+                <AlertError>Se admite letras [ a-z ] y [ A-Z ]</AlertError>
               )}
             </div>
           )}
-          <LabelBox htmlFor="day">Día:</LabelBox>
-          <InputBox
-            {...register("day", {
-              required: true,
-            })}
-            type="date"
-            name="day"
-            onChange={handleChange}
-          />
-          {errors.day && (
-            <div>
-              {errors.day?.type === "required" && (
-                <AlertError>Por favor, elija una fecha</AlertError>
-              )}
-            </div>
-          )}
-          <LabelBox htmlFor="hour">Hora:</LabelBox>
-          <InputBox
-            {...register("hour", { required: true })}
-            type="time"
-            name="hour"
-            onChange={handleChange}
-          />
-          {errors.hour && (
-            <div>
-              {errors.hour?.type === "required" && (
-                <AlertError>Por favor, elija una hora</AlertError>
-              )}
-            </div>
-          )}
-          <SendButton>Agendar</SendButton>
+          <SendButton>Enviar Mensaje</SendButton>
         </FormLayout>
       </FormBox>
     </>
   );
 };
 
-export default ServiceBook;
+export default ContactForm;

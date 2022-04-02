@@ -2,6 +2,11 @@ import styled from "styled-components";
 import COLORS from "../../styles/colors.jsx";
 //Styles for Nav
 export const NavShadow = styled.header`
+  /* config user select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
   /* box-shadow: 0px 1px 8px 0px rgb(224, 199, 210); */
   background-color: ${(props) =>
     props.background ? `${COLORS.navBar_background_color}` : `transparent`};
@@ -59,6 +64,12 @@ export const Info = styled.div`
 `;
 //Style for NavComponent
 export const NavComponentLayout = styled.div`
+  /* config user select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  /* config styles */
   text-align: center;
   height: 100vh;
   font-size: 50px;

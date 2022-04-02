@@ -2,6 +2,9 @@ import styled from "styled-components";
 import COLORS from "../colors";
 //FORM
 export const FormBox = styled.div`
+  /* Config Layout of form */
+  display: flex;
+  justify-content: center;
   /* Config to link book service */
   border-top: 72px solid transparent;
   margin-top: -72px;
@@ -29,6 +32,12 @@ export const FormBox = styled.div`
 `;
 // Config jump to ServiceBox
 export const ServiceBox = styled.div`
+  /* config user select */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  /* config jump to servicebox */
   border-top: 72px solid transparent;
   margin-top: -72px;
   -webkit-background-clip: padding-box;

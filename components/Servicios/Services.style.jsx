@@ -27,7 +27,7 @@ export const ServiceBoxLayout = styled.div`
     left: 20%;
     @media screen and (min-width: 320px) {
       max-width: 190px;
-      left: 24%
+      left: 24%;
     }
     @media screen and (min-width: 400px) {
       max-width: 280px;
@@ -115,6 +115,7 @@ export const Background = styled.div`
 `;
 export const ImageLayout = styled.div`
   position: relative;
+
   height: 100%;
   width: 100%;
   min-height: 250px;
@@ -140,6 +141,7 @@ export const ImageLayout = styled.div`
 export const PrimaryImage = styled.div`
   width: 150px;
   position: absolute;
+  pointer-events: none;
   right: 0;
   top: 0;
   @media screen and (min-width: 320px) {
@@ -164,6 +166,7 @@ export const PrimaryImage = styled.div`
 export const SecundaryImage = styled.div`
   width: 100px;
   position: absolute;
+  pointer-events: none;
   bottom: 20px;
   @media screen and (min-width: 320px) {
     width: 125px;
@@ -313,13 +316,13 @@ export const ModalContainer = styled.div`
   height: 100%;
   top: 0;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.8);
 `;
 export const ProductsLayout = styled.section`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  grid-gap: 20px;
-  
+  grid-gap: 40px;
+
   @media screen and (min-width: 678px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -365,7 +368,7 @@ export const CloseButton = styled.div`
 `;
 //BoxCard
 export const BoxCard = styled.div`
-  background-color: #fff;
+  background-color: #cecece;
   border-radius: 4px;
   display: flex;
   flex-direction: column;
@@ -386,7 +389,7 @@ export const TitleCard = styled.div`
 `;
 export const ImageFrame = styled.div`
   text-align: center;
-  
+  pointer-events: none;
 `;
 export const Price = styled.div`
   border: 1px solid #202020;
@@ -398,15 +401,20 @@ export const Price = styled.div`
 `;
 //Form
 export const FormBox = styled.div`
+  /* config select user */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  -ms-user-select: none;
+  /* config styles */
   background-color: ${COLORS.black_transparent_color};
-  margin: 0 auto;
   border-radius: 4px;
   padding: 20px 0px 20px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 260px;
+  width: 290px;
   @media screen and (min-width: 480px) {
     width: 360px;
   }
@@ -429,7 +437,7 @@ export const FormLayout = styled.form`
   flex-direction: column;
   font-size: 16px;
   color: ${COLORS.white_color};
-  width: 200px;
+  width: 230px;
   gap: 4px;
   @media screen and (min-width: 480px) {
     width: 300px;
@@ -463,6 +471,17 @@ export const InputBox = styled.input`
   color: ${COLORS.white_color};
   font-size: 14px;
 `;
+export const TextBox = styled.textarea`
+  /* padding: 6px 8px; */
+  height: 64px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: ${COLORS.white_color};
+  font-size: 14px;
+  min-width: 100%;
+  max-width: 100%;
+`;
 export const SelectBox = styled.select`
   /* padding: 6px 8px; */
   padding: 0px 8px 0px 8px;
@@ -484,11 +503,11 @@ export const AlertError = styled.div`
 `;
 export const SendButton = styled.button`
   background-color: ${COLORS.pink_color4};
-  padding: 6px 0px;
+  padding: 6px 10px;
   cursor: pointer;
   font-size: 16px;
   text-align: center;
-  width: 86px;
+  min-width: 86px;
   margin: 10px auto 0px auto;
   border: 1px solid black;
   outline: none;

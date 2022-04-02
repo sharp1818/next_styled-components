@@ -17,12 +17,12 @@ const servicios = ({
     <>
       <NavComponent
         page_title={"Servicios"}
-        id_1={"#services-box"}
+        id_1={"#nuestrosServicios"}
         title_id_1={"Nuestros Servicios"}
-        id_2={"#form-box"}
-        title_id_2={"Reserva una cita"}
+        id_2={"#agendaCita"}
+        title_id_2={"Agenda una cita"}
       />
-      <ServiceBox className="background-NavComponent" id="services-box">
+      <ServiceBox className="background-NavComponent" id="nuestrosServicios">
         {services.map((service) => (
           <ServicesBox
             key={service.id_group}
@@ -53,7 +53,7 @@ const servicios = ({
           />
         ))}
       </ServiceBox>
-      <FormBox id="form-box">
+      <FormBox id="agendaCita">
         <ServiceBook />
       </FormBox>
     </>
