@@ -346,8 +346,8 @@ export const CloseButton = styled.div`
   max-width: 200px;
   cursor: pointer;
   transform: rotate(0deg);
-  user-select: none;
   -webkit-user-select: none;
+  user-select: none;
   touch-action: manipulation;
   :focus {
     outline: 0;
@@ -406,6 +406,7 @@ export const FormBox = styled.div`
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   /* config styles */
   background-color: ${COLORS.black_transparent_color};
   border-radius: 4px;

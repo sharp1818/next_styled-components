@@ -36,7 +36,8 @@ export const ServiceBox = styled.div`
   -webkit-user-select: none;
   -moz-user-select: none;
   -khtml-user-select: none;
-  -ms-user-select: none;
+  -ms-user-select: none; 
+  user-select: none;
   /* config jump to servicebox */
   border-top: 72px solid transparent;
   margin-top: -72px;

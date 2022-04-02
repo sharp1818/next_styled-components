@@ -75,6 +75,7 @@ export const TitleBox = styled.div`
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
+  user-select: none;
 `;
 export const Data = styled.div`
   color: ${COLORS.white_color};
@@ -84,6 +85,7 @@ export const Data = styled.div`
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   
 `;
 export const Ubication = styled.div`

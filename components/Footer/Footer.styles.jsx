@@ -7,6 +7,7 @@ export const FooterLayout = styled.footer`
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   display: flex;
   /* config layout */
   flex-direction: column;

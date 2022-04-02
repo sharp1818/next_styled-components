@@ -7,6 +7,7 @@ export const NavShadow = styled.header`
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   /* box-shadow: 0px 1px 8px 0px rgb(224, 199, 210); */
   background-color: ${(props) =>
     props.background ? `${COLORS.navBar_background_color}` : `transparent`};
@@ -69,6 +70,7 @@ export const NavComponentLayout = styled.div`
   -moz-user-select: none;
   -khtml-user-select: none;
   -ms-user-select: none;
+  user-select: none;
   /* config styles */
   text-align: center;
   height: 100vh;
