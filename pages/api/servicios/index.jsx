@@ -23,5 +23,4 @@ const SaveData = async (req, res) => {
     day,
     hour,
   });
-  console.log(result);
 };

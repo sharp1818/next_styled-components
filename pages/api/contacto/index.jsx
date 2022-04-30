@@ -15,5 +15,4 @@ const SaveData = async (req, res) => {
     phone,
     message
   });
-  console.log(result);
 };

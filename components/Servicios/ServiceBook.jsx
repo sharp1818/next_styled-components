@@ -36,7 +36,14 @@ const ServiceBook = () => {
 
   const onSubmit = async () => {
     const res = await axios.post("api/servicios", info).then(reset());
-    console.log(res);
+  };
+
+  const disablePastDate = () => {
+    const today = new Date();
+    const dd = String(today.getDate() + 0).padStart(2, "0");
+    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = today.getFullYear();
+    return yyyy + "-" + mm + "-" + dd;
   };
 
   return (
@@ -130,9 +137,13 @@ const ServiceBook = () => {
               Selecciona un Servicio
             </option>
             <option value="Manicure & Pedicure">Manicure & Pedicure</option>
-            <option value="Corte & Coloración de Cabello">Corte & Coloración de Cabello</option>
+            <option value="Corte & Coloración de Cabello">
+              Corte & Coloración de Cabello
+            </option>
             <option value="Pestañas & Cejas">Pestañas & Cejas</option>
-            <option value="Peinados, Tratamientos & Alisados">Peinados, Tratamientos & Alisados</option>
+            <option value="Peinados, Tratamientos & Alisados">
+              Peinados, Tratamientos & Alisados
+            </option>
             <option value="Selyn Esthetic">Selyn Esthetic</option>
             <option value="Eventos">Eventos</option>
           </SelectBox>
@@ -149,6 +160,8 @@ const ServiceBook = () => {
               required: true,
             })}
             type="date"
+            min={disablePastDate()}
+            max="2023-12-31"
             name="day"
             onChange={handleChange}
           />
@@ -173,7 +186,7 @@ const ServiceBook = () => {
               )}
             </div>
           )}
-          <SendButton>Agendar</SendButton>
+          <SendButton>Enviar</SendButton>
         </FormLayout>
       </FormBox>
     </>

@@ -118,7 +118,7 @@ export const ButtonLink = styled.a`
   border: 1px solid black;
   border-radius: 4px;
   padding: 10px 0px;
-  width: 220px;
+  width: 240px;
   letter-spacing: 2px;
 `;
 //Styles for NavMobile

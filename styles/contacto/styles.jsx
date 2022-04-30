@@ -13,7 +13,7 @@ export const LayoutForm = styled.div`
   background-color: ${COLORS.white_color};
   /* background-color: #0000ff18; */
   /* Config Jump To Form */
-  border-top: 144px solid transparent;
+  border-top: 72px solid transparent;
   margin-top: -72px;
   -webkit-background-clip: padding-box;
   -moz-background-clip: padding;
@@ -22,11 +22,11 @@ export const LayoutForm = styled.div`
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   @media screen and (min-width: 420px) {
-    border-top: 176px solid transparent;
+    border-top: 88px solid transparent;
     margin-top: -88px;
   }
   @media screen and (min-width: 920px) {
-    border-top: 206px solid transparent;
+    border-top: 103px solid transparent;
     margin-top: -103px;
     grid-template-columns: 2fr 1fr;
   }

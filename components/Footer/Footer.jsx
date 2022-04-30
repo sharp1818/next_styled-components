@@ -17,7 +17,6 @@ import { FaPhoneAlt } from "react-icons/fa";
 
 const Footer = () => {
   const router = useRouter();
-  console.log(router.pathname);
   return (
     <>
       <FooterLayout>

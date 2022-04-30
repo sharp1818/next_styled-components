@@ -9,12 +9,12 @@ import ContactGiftCard from "../components/Contacto/ContactGiftCard";
 const contacto = () => {
   return (
     <>
+      <NavComponent
+        page_title={"Contacto"}
+        id_1={"#contactar"}
+        title_id_1={"Contactar"}
+      />
       <Container>
-        {/* <NavComponent
-          page_title={"Contacto"}
-          id_1={"#contactar"}
-          title_id_1={"Contactar"}
-        /> */}
         <LayoutForm id="contactar">
           <div className="ContactFormLayout">
             <ContactForm />

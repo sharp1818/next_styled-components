@@ -38,7 +38,6 @@ const ContactForm = () => {
 
   const onSubmit = async () => {
     const res = await axios.post("api/contacto", info).then(reset());
-    console.log(res);
   };
 
   return (
@@ -148,7 +147,7 @@ const ContactForm = () => {
               )}
             </div>
           )}
-          <SendButton>Enviar Mensaje</SendButton>
+          <SendButton>Enviar</SendButton>
         </FormLayout>
       </FormBox>
     </>
